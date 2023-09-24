@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${db.hostname}:${db.port}/${db.dbname}
+    username: ${db.username}
+    password: ${db.password}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    database: postgresql
+    properties:
+      hibernate:
+        format_sql: true
+    generate-ddl: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+
+# application.yml의 내용 추가할 것
